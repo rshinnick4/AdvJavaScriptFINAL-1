@@ -1,18 +1,18 @@
 const http = require("http");
+const http = require("/HTML")
 
-const server = http.createServer(function(req, res){
-    
-    res.setHeader('Content-type', 'html');
-    res.setHeader('Access-Control-Allow-Origin', "*");
-    res.writeHead(200); //status code HTTP 200 / OK
 
-    let data = "/html.html"
-    res.end(html);
+const reqListener = http.createServer(function (req, res){
+
+    fs.readFile(__dirname + "/Website.html")
+        .then(content => {
+            res.setHeader("Content-Type", "text/html");
+            res.writeHead(200);
+            res.end(content);
+        })
+};
+
+const server = http.createServer(reqListener);
+server.listen(65, localhost, () => {
+    console.log('Server is listening on port 65'); //server is on http://localhost:65/
 });
-
-server.listen(65, function(){
-    console.log("listening on port 65"); //running on http://localhost:65/
-})
-
-const host = 'localhost';
-const port = 65;
