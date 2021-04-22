@@ -10,7 +10,7 @@ const reqListener = http.createServer(function (req, res){
             res.writeHead(200);
             res.end(content);
         })
-};
+});
 
 const server = http.createServer(reqListener);
 server.listen(65, localhost, () => {
