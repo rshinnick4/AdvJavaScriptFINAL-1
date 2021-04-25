@@ -63,7 +63,16 @@ body {font-family: Arial;}
 <form>
     <br>
 
-    <button onclick='sign_in()'>Sign in</button>
+    <button onclick='sign_in()'>Sign in
+    <script>
+        //send a request to the server with the email/pass the server has to check the credentials and send back a confirmation 
+        var signIn = require('./index.js')
+        var sendSignIn = function(){
+             
+        }
+    </script>
+    
+    </button>
 </form>
 
 </body>
